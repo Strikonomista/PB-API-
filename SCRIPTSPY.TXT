@@ -1,0 +1,88 @@
+let
+    Fonte = Python.Execute("from pycoingecko import CoinGeckoAPI#(lf)import pandas as pd#(lf)#(lf)# Inicializa a API#(lf)cg = CoinGeckoAPI()#(lf)#(lf)# Consulta o preço do Bitcoin#(lf)bitcoin_data = cg.get_price(ids='bitcoin', vs_currencies='usd')#(lf)price = bitcoin_data['bitcoin']['usd']#(lf)#(lf)# Cria um DataFrame com o preço#(lf)df = pd.DataFrame({'Cryptocurrency': ['Bitcoin'], 'Price (USD)': [price], 'Date': [pd.to_datetime('today')]})#(lf)print(df)#(lf)"),
+    df1 = Fonte{[Name="df"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(df1,{{"Cryptocurrency", type text}, {"Price (USD)", Int64.Type}, {"Date", type datetime}})
+in
+    
+
+let
+    Fonte = Python.Execute("from pycoingecko import CoinGeckoAPI#(lf)import pandas as pd#(lf)#(lf)# Inicializa a API#(lf)cg = CoinGeckoAPI()#(lf)#(lf)# Consulta o preço do Yearn Finance#(lf)yf_data = cg.get_price(ids='yearn-finance', vs_currencies='usd')#(lf)price = yf_data['yearn-finance']['usd']#(lf)#(lf)# Cria um DataFrame com o preço#(lf)df = pd.DataFrame({'Cryptocurrency': ['Yearn Finance'], 'Price (USD)': [price], 'Date': [pd.to_datetime('today')]})#(lf)print(df)#(lf)"),
+    df1 = Fonte{[Name="df"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(df1,{{"Cryptocurrency", type text}, {"Price (USD)", Int64.Type}, {"Date", type datetime}})
+in
+    
+let
+    Fonte = Python.Execute("from pycoingecko import CoinGeckoAPI#(lf)import pandas as pd#(lf)#(lf)# Inicializa a API#(lf)cg = CoinGeckoAPI()#(lf)#(lf)# Consulta o preço do Ethereum#(lf)eth_data = cg.get_price(ids='ethereum', vs_currencies='usd')#(lf)price = eth_data['ethereum']['usd']#(lf)#(lf)# Cria um DataFrame com o preço#(lf)df = pd.DataFrame({'Cryptocurrency': ['Ethereum'], 'Price (USD)': [price], 'Date': [pd.to_datetime('today')]})#(lf)print(df)#(lf)"),
+    df1 = Fonte{[Name="df"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(df1,{{"Cryptocurrency", type text}, {"Price (USD)", Int64.Type}, {"Date", type datetime}})
+in
+    #"Tipo Alterado"
+let
+    Fonte = Python.Execute("from pycoingecko import CoinGeckoAPI#(lf)import pandas as pd#(lf)#(lf)# Inicializa a API#(lf)cg = CoinGeckoAPI()#(lf)#(lf)# Consulta o preço do Maker#(lf)maker_data = cg.get_price(ids='maker', vs_currencies='usd')#(lf)price = maker_data['maker']['usd']#(lf)#(lf)# Cria um DataFrame com o preço#(lf)df = pd.DataFrame({'Cryptocurrency': ['Maker'], 'Price (USD)': [price], 'Date': [pd.to_datetime('today')]})#(lf)print(df)#(lf)"),
+    df1 = Fonte{[Name="df"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(df1,{{"Cryptocurrency", type text}, {"Price (USD)", Int64.Type}, {"Date", type datetime}})
+in
+    #"Tipo Alterado"
+let
+    Fonte = Python.Execute("from pycoingecko import CoinGeckoAPI#(lf)import pandas as pd#(lf)#(lf)# Inicializa a API#(lf)cg = CoinGeckoAPI()#(lf)#(lf)# Consulta o preço do Binance Coin#(lf)bnb_data = cg.get_price(ids='binancecoin', vs_currencies='usd')#(lf)price = bnb_data['binancecoin']['usd']#(lf)#(lf)# Cria um DataFrame com o preço#(lf)df = pd.DataFrame({'Cryptocurrency': ['Binance Coin'], 'Price (USD)': [price], 'Date': [pd.to_datetime('today')]})#(lf)print(df)#(lf)"),
+    df1 = Fonte{[Name="df"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(df1,{{"Cryptocurrency", type text}, {"Price (USD)", Int64.Type}, {"Date", type datetime}})
+in
+    #"Tipo Alterado"
+
+let
+    Fonte = Python.Execute("from pycoingecko import CoinGeckoAPI#(lf)import pandas as pd#(lf)#(lf)# Inicializa a API#(lf)cg = CoinGeckoAPI()#(lf)#(lf)# Consulta o preço do Solana#(lf)solana_data = cg.get_price(ids='solana', vs_currencies='usd')#(lf)price = solana_data['solana']['usd']#(lf)#(lf)# Cria um DataFrame com o preço#(lf)df = pd.DataFrame({'Cryptocurrency': ['Solana'], 'Price (USD)': [price], 'Date': [pd.to_datetime('today')]})#(lf)print(df)#(lf)"),
+    df1 = Fonte{[Name="df"]}[Value]
+in
+    df1
+let
+    Fonte = Python.Execute("from pycoingecko import CoinGeckoAPI#(lf)import pandas as pd#(lf)#(lf)# Inicializa a API#(lf)cg = CoinGeckoAPI()#(lf)#(lf)# Consulta o preço do Tezos#(lf)tezos_data = cg.get_price(ids='tezos', vs_currencies='usd')#(lf)price = tezos_data['tezos']['usd']#(lf)#(lf)# Cria um DataFrame com o preço#(lf)df = pd.DataFrame({'Cryptocurrency': ['Tezos'], 'Price (USD)': [price], 'Date': [pd.to_datetime('today')]})#(lf)print(df)#(lf)"),
+    df1 = Fonte{[Name="df"]}[Value]
+in
+    df1
+let
+    Fonte = Python.Execute("from pycoingecko import CoinGeckoAPI#(lf)import pandas as pd#(lf)#(lf)# Inicializa a API#(lf)cg = CoinGeckoAPI()#(lf)#(lf)# Consulta o preço do PancakeSwap#(lf)pancake_data = cg.get_price(ids='pancakeswap-token', vs_currencies='usd')#(lf)price = pancake_data['pancakeswap-token']['usd']#(lf)#(lf)# Cria um DataFrame com o preço#(lf)df = pd.DataFrame({'Cryptocurrency': ['PancakeSwap'], 'Price (USD)': [price], 'Date': [pd.to_datetime('today')]})#(lf)print(df)#(lf)"),
+    df1 = Fonte{[Name="df"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(df1,{{"Cryptocurrency", type text}, {"Price (USD)", Int64.Type}, {"Date", type datetime}})
+in
+    #"Tipo Alterado"
+let
+    Fonte = Python.Execute("from pycoingecko import CoinGeckoAPI#(lf)import pandas as pd#(lf)from datetime import datetime, timedelta#(lf)#(lf)# Inicializa a API#(lf)cg = CoinGeckoAPI()#(lf)#(lf)# Define o período dos últimos 5 meses#(lf)end_date = datetime.now()  # Data atual#(lf)start_date = end_date - timedelta(days=5 * 30)  # Aproximadamente 5 meses atrás#(lf)#(lf)# Converte as datas para timestamps (em segundos, para a API do CoinGecko)#(lf)start_timestamp = int(start_date.timestamp())#(lf)end_timestamp = int(end_date.timestamp())#(lf)#(lf)# Obtém os dados históricos do Bitcoin#(lf)bitcoin_data = cg.get_coin_market_chart_range_by_id(#(lf)    id='bitcoin',#(lf)    vs_currency='usd',#(lf)    from_timestamp=start_timestamp,#(lf)    to_timestamp=end_timestamp#(lf))#(lf)#(lf)# Extrai as datas e preços#(lf)prices = bitcoin_data['prices']#(lf)formatted_data = [{'Date': datetime.utcfromtimestamp(price[0] / 1000), 'Price (USD)': price[1]} for price in prices]#(lf)#(lf)# Converte para DataFrame#(lf)df = pd.DataFrame(formatted_data)#(lf)#(lf)# Adiciona a coluna de mudança de preço#(lf)df['Change'] = df['Price (USD)'].diff()  # Diferença entre os dias#(lf)df['Trend'] = df['Change'].apply(lambda x: 'Up' if x > 0 else ('Down' if x < 0 else 'No Change'))#(lf)#(lf)# Exporta para CSV (para importar no Power BI)#(lf)df.to_csv('bitcoin_price_trend.csv', index=False)#(lf)#(lf)# Exibe os primeiros dados#(lf)print(df.head())#(lf)"),
+    bitcoin_price_trend1 = Fonte{[Name="bitcoin_price_trend"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(bitcoin_price_trend1,{{"Date", type date}, {"Price (USD)", Int64.Type}, {"Change", Int64.Type}, {"Trend", type text}})
+in
+    #"Tipo Alterado"
+let
+    Fonte = Python.Execute("from pycoingecko import CoinGeckoAPI#(lf)import pandas as pd#(lf)from datetime import datetime, timedelta#(lf)#(lf)# Inicializa a API#(lf)cg = CoinGeckoAPI()#(lf)#(lf)# Define o período dos últimos 5 meses#(lf)end_date = datetime.now()  # Data atual#(lf)start_date = end_date - timedelta(days=5 * 30)  # Aproximadamente 5 meses atrás#(lf)#(lf)# Converte as datas para timestamps (em segundos, para a API do CoinGecko)#(lf)start_timestamp = int(start_date.timestamp())#(lf)end_timestamp = int(end_date.timestamp())#(lf)#(lf)# Obtém os dados históricos do Bitcoin#(lf)bitcoin_data = cg.get_coin_market_chart_range_by_id(#(lf)    id='bitcoin',#(lf)    vs_currency='usd',#(lf)    from_timestamp=start_timestamp,#(lf)    to_timestamp=end_timestamp#(lf))#(lf)#(lf)# Extrai as datas e preços#(lf)prices = bitcoin_data['prices']#(lf)formatted_data = [{'Date': datetime.utcfromtimestamp(price[0] / 1000), 'Price (USD)': price[1]} for price in prices]#(lf)#(lf)# Converte para DataFrame#(lf)df = pd.DataFrame(formatted_data)#(lf)#(lf)# Adiciona a coluna de mudança de preço#(lf)df['Change'] = df['Price (USD)'].diff()  # Diferença entre os dias#(lf)df['Trend'] = df['Change'].apply(lambda x: 'Up' if x > 0 else ('Down' if x < 0 else 'No Change'))#(lf)#(lf)# Exporta para CSV (para importar no Power BI)#(lf)df.to_csv('bitcoin_price_trend.csv', index=False)#(lf)#(lf)# Exibe os primeiros dados#(lf)print(df.head())#(lf)"),
+    df1 = Fonte{[Name="df"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(df1,{{"Date", type date}, {"Price (USD)", Int64.Type}, {"Change", Int64.Type}, {"Trend", type text}})
+in
+    #"Tipo Alterado"
+
+let
+    Fonte = Python.Execute("from pycoingecko import CoinGeckoAPI#(lf)import pandas as pd#(lf)from datetime import datetime, timedelta#(lf)#(lf)# Inicializa a API#(lf)cg = CoinGeckoAPI()#(lf)#(lf)# Define o período dos últimos 5 meses#(lf)end_date = datetime.now()  # Data atual#(lf)start_date = end_date - timedelta(days=5 * 30)  # Aproximadamente 5 meses atrás#(lf)#(lf)# Converte as datas para timestamps (em segundos, para a API do CoinGecko)#(lf)start_timestamp = int(start_date.timestamp())#(lf)end_timestamp = int(end_date.timestamp())#(lf)#(lf)# Obtém os dados históricos do Ethereum#(lf)ethereum_data = cg.get_coin_market_chart_range_by_id(#(lf)    id='ethereum',#(lf)    vs_currency='usd',#(lf)    from_timestamp=start_timestamp,#(lf)    to_timestamp=end_timestamp#(lf))#(lf)#(lf)# Extrai as datas e preços#(lf)prices = ethereum_data['prices']#(lf)formatted_data = [{'Date': datetime.utcfromtimestamp(price[0] / 1000), 'Price (USD)': price[1]} for price in prices]#(lf)#(lf)# Converte para DataFrame#(lf)df = pd.DataFrame(formatted_data)#(lf)#(lf)# Adiciona a coluna de mudança de preço#(lf)df['Change'] = df['Price (USD)'].diff()  # Diferença entre os dias#(lf)df['Trend'] = df['Change'].apply(lambda x: 'Up' if x > 0 else ('Down' if x < 0 else 'No Change'))#(lf)#(lf)# Exporta para CSV (para importar no Power BI)#(lf)df.to_csv('ethereum_price_trend.csv', index=False)#(lf)#(lf)# Exibe os primeiros dados#(lf)print(df.head())#(lf)"),
+    df1 = Fonte{[Name="df"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(df1,{{"Date", type date}, {"Price (USD)", Int64.Type}, {"Change", Int64.Type}, {"Trend", type text}})
+in
+    #"Tipo Alterado"
+
+let
+    Fonte = Python.Execute("from pycoingecko import CoinGeckoAPI#(lf)import pandas as pd#(lf)from datetime import datetime, timedelta#(lf)#(lf)# Inicializa a API#(lf)cg = CoinGeckoAPI()#(lf)#(lf)# Define o período dos últimos 5 meses#(lf)end_date = datetime.now()  # Data atual#(lf)start_date = end_date - timedelta(days=5 * 30)  # Aproximadamente 5 meses atrás#(lf)#(lf)# Converte as datas para timestamps (em segundos, para a API do CoinGecko)#(lf)start_timestamp = int(start_date.timestamp())#(lf)end_timestamp = int(end_date.timestamp())#(lf)#(lf)# Obtém os dados históricos do Ethereum#(lf)ethereum_data = cg.get_coin_market_chart_range_by_id(#(lf)    id='ethereum',#(lf)    vs_currency='usd',#(lf)    from_timestamp=start_timestamp,#(lf)    to_timestamp=end_timestamp#(lf))#(lf)#(lf)# Extrai as datas e preços#(lf)prices = ethereum_data['prices']#(lf)formatted_data = [{'Date': datetime.utcfromtimestamp(price[0] / 1000), 'Price (USD)': price[1]} for price in prices]#(lf)#(lf)# Converte para DataFrame#(lf)df = pd.DataFrame(formatted_data)#(lf)#(lf)# Adiciona a coluna de mudança de preço#(lf)df['Change'] = df['Price (USD)'].diff()  # Diferença entre os dias#(lf)df['Trend'] = df['Change'].apply(lambda x: 'Up' if x > 0 else ('Down' if x < 0 else 'No Change'))#(lf)#(lf)# Exporta para CSV (para importar no Power BI)#(lf)df.to_csv('ethereum_price_trend.csv', index=False)#(lf)#(lf)# Exibe os primeiros dados#(lf)print(df.head())#(lf)"),
+    ethereum_price_trend1 = Fonte{[Name="ethereum_price_trend"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(ethereum_price_trend1,{{"Date", type date}, {"Price (USD)", Int64.Type}, {"Change", Int64.Type}, {"Trend", type text}})
+in
+    #"Tipo Alterado"
+
+let
+    Fonte = Python.Execute("from pycoingecko import CoinGeckoAPI#(lf)import pandas as pd#(lf)from datetime import datetime, timedelta#(lf)#(lf)# Inicializa a API#(lf)cg = CoinGeckoAPI()#(lf)#(lf)# Define o período dos últimos 5 meses#(lf)end_date = datetime.now()  # Data atual#(lf)start_date = end_date - timedelta(days=5 * 30)  # Aproximadamente 5 meses atrás#(lf)#(lf)# Converte as datas para timestamps (em segundos, para a API do CoinGecko)#(lf)start_timestamp = int(start_date.timestamp())#(lf)end_timestamp = int(end_date.timestamp())#(lf)#(lf)# Obtém os dados históricos do Yearn Finance (YFI)#(lf)yearn_data = cg.get_coin_market_chart_range_by_id(#(lf)    id='yearn-finance',#(lf)    vs_currency='usd',#(lf)    from_timestamp=start_timestamp,#(lf)    to_timestamp=end_timestamp#(lf))#(lf)#(lf)# Extrai as datas e preços#(lf)prices = yearn_data['prices']#(lf)formatted_data = [{'Date': datetime.utcfromtimestamp(price[0] / 1000), 'Price (USD)': price[1]} for price in prices]#(lf)#(lf)# Converte para DataFrame#(lf)df = pd.DataFrame(formatted_data)#(lf)#(lf)# Adiciona a coluna de mudança de preço#(lf)df['Change'] = df['Price (USD)'].diff()  # Diferença entre os dias#(lf)df['Trend'] = df['Change'].apply(lambda x: 'Up' if x > 0 else ('Down' if x < 0 else 'No Change'))#(lf)#(lf)# Exporta para CSV (para importar no Power BI)#(lf)df.to_csv('yearn_price_trend.csv', index=False)#(lf)#(lf)# Exibe os primeiros dados#(lf)print(df.head())#(lf)"),
+    df1 = Fonte{[Name="df"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(df1,{{"Date", type date}, {"Price (USD)", Int64.Type}, {"Change", Int64.Type}, {"Trend", type text}})
+in
+    #"Tipo Alterado"
+
+let
+    Fonte = Python.Execute("from pycoingecko import CoinGeckoAPI#(lf)import pandas as pd#(lf)from datetime import datetime, timedelta#(lf)#(lf)# Inicializa a API#(lf)cg = CoinGeckoAPI()#(lf)#(lf)# Define o período dos últimos 5 meses#(lf)end_date = datetime.now()  # Data atual#(lf)start_date = end_date - timedelta(days=5 * 30)  # Aproximadamente 5 meses atrás#(lf)#(lf)# Converte as datas para timestamps (em segundos, para a API do CoinGecko)#(lf)start_timestamp = int(start_date.timestamp())#(lf)end_timestamp = int(end_date.timestamp())#(lf)#(lf)# Obtém os dados históricos do Yearn Finance (YFI)#(lf)yearn_data = cg.get_coin_market_chart_range_by_id(#(lf)    id='yearn-finance',#(lf)    vs_currency='usd',#(lf)    from_timestamp=start_timestamp,#(lf)    to_timestamp=end_timestamp#(lf))#(lf)#(lf)# Extrai as datas e preços#(lf)prices = yearn_data['prices']#(lf)formatted_data = [{'Date': datetime.utcfromtimestamp(price[0] / 1000), 'Price (USD)': price[1]} for price in prices]#(lf)#(lf)# Converte para DataFrame#(lf)df = pd.DataFrame(formatted_data)#(lf)#(lf)# Adiciona a coluna de mudança de preço#(lf)df['Change'] = df['Price (USD)'].diff()  # Diferença entre os dias#(lf)df['Trend'] = df['Change'].apply(lambda x: 'Up' if x > 0 else ('Down' if x < 0 else 'No Change'))#(lf)#(lf)# Exporta para CSV (para importar no Power BI)#(lf)df.to_csv('yearn_price_trend.csv', index=False)#(lf)#(lf)# Exibe os primeiros dados#(lf)print(df.head())#(lf)"),
+    yearn_price_trend1 = Fonte{[Name="yearn_price_trend"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(yearn_price_trend1,{{"Date", type date}, {"Price (USD)", Int64.Type}, {"Change", Int64.Type}, {"Trend", type text}})
+in
+    #"Tipo Alterado"
